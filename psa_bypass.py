@@ -49,5 +49,5 @@ def try2link_scrape(url):
 	url = 'https://try2link.com/'+re.findall('try2link\.com\/(.*?) ', res.text)[0]
 	print(try2link_bypass(url))
     
-
+print(try2link_bypass(url)) 
  
