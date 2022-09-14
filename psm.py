@@ -38,7 +38,7 @@ def psm(url):
         }, data=data
     )
     out = res.json()['url'].replace('\/','/')
-    return 
+    return out
     
 
 print(psm(url))
