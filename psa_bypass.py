@@ -27,7 +27,7 @@ def try2link_scrape(url):
 	}
 	res = client.get(url, cookies={}, headers=h)
 	url = 'https://try2link.com/'+re.findall('try2link\.com\/(.*?) ', res.text)[0]
-	print(try2link_bypass(urly))
+	print(try2link_bypass(url))
 
 def try2link_bypass(url):
 	client = cloudscraper.create_scraper(allow_brotli=False)
