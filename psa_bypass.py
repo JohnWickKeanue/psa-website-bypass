@@ -20,6 +20,14 @@ def psa_bypasser(psa_url):
 				executor.submit(try2link_scrape, exit_gate)
 			except: pass
 
+def try2link_scrape(url):
+	client = cloudscraper.create_scraper(allow_brotli=False)	
+	h = {
+	'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+	}
+	res = client.get(url, cookies={}, headers=h)
+	url = 'https://try2link.com/'+re.findall('try2link\.com\/(.*?) ', res.text)[0]
+	print(try2link_bypass(url))
 
 def try2link_bypass(url):
 	client = cloudscraper.create_scraper(allow_brotli=False)
@@ -40,14 +48,6 @@ def try2link_bypass(url):
 	return bypassed_url.json()["url"]
 		
 
-def try2link_scrape(url):
-	client = cloudscraper.create_scraper(allow_brotli=False)	
-	h = {
-	'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
-	}
-	res = client.get(url, cookies={}, headers=h)
-	url = 'https://try2link.com/'+re.findall('try2link\.com\/(.*?) ', res.text)[0]
-	print(try2link_bypass(url))
     
 print(psa_bypasser(psa_url)) 
  
