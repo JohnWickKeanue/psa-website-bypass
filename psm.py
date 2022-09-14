@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-url = 'https://psa.pm/exit/d131b9c1f9cb281390cad99fe6b8cb6f/meBhW5x8PH6BemidHPgl4G3uMujdl0cTkOdRu3j3zJDlbsgWMhhKL05gHzsvnx64MSV0WuetpAQdjguU0sgtUhgmrUb0b3i98PCi3usyeiyy9D86gmKk6scex5bPciAM:SGZlajBGRDBVMEpib3F5aU1OaXozZz09:Hfej0FD0U0JboqyiMNiz3mVkZTk3ZDcwZjU1ZjQ2M2I1Mzk2MWRhOGQ0NjRjOGMx'
+url = "https://psa.pm/exit/d131b9c1f9cb281390cad99fe6b8cb6f/md2JdE0UlcUvkev2zWEWAHoasasc8x/BrXktLrukxLhdQqHjzN+K/TPVLfQVRHZzX66IfEccWHW63vfw/NyAqgGU39ej7/KS4WMjHzXfOdmvBNCsr10Q6CPVO2HMOvf5:RW1EaVJLSjZjYnVqQ1J4SWlBdjE3QT09:EmDiRKJ6cbujCRxIiAv17GVkZTk3ZDcwZjU1ZjQ2M2I1Mzk2MWRhOGQ0NjRjOGMx"
 
 def psm(url):
     client = requests.Session()
